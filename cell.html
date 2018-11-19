@@ -16,30 +16,50 @@
 
     <a-scene>
       <a-sphere position="0 1.25 -5" radius="10" color="#294B82"></a-sphere>
-      <a-sphere position="-4 1.25 -5" radius="2" color="#EF2D5E"></a-sphere>
+      <a-sphere position="-4 1.25 -5" radius="2" color="#EF2D5E"
+      event-set__enter="_event: mouseenter; _target: #NucleusText; visible: true"
+      event-set__leave="_event:mouseleave;_target: #NucleusText; visible: false">
+      </a-sphere>
       <a-sphere position="-3.719 1.25 -4.832" radius="1" color="#FFD84f"></a-sphere>
       <a-sphere position="0 1.5 -5" radius=".25" color="#D8B411"></a-sphere>
       <a-sphere position=".5 1.25 -5" radius=".25" color="#D8B411"></a-sphere>
       <a-sphere position="-3.068 2.519 -1.006" radius=".25" color="#D8B411"></a-sphere>
-      <a-sphere position="1.841 2.519 -1.006" radius=".25" color="#D8B411"></a-sphere>
+      <a-sphere position="1.841 2.519 -1.006" radius=".25" color="#D8B411"
+      event-set__enter="_event: mouseenter; _target: #RibosomeText; visible: true"
+      event-set__leave="_event:mouseleave;_target: #RibosomeText; visible: false"></a-sphere>
       <a-box position="1.035 2.519 0.644" radius= ".15" color="#57AF1C"></a-box>
       <a-box position="-0.915 2.519 2.096" radius= ".15" color="#57AF1C"></a-box>
-      <a-box position="0.229 2.519 -6.582" radius= ".15" color="#57AF1C"></a-box>
-      <a-text value="Nucleus : the brain of the cell" position="-4.937 1.25 -2.935" color= "#000000"></a-text>
+      <a-box position="0.229 2.519 -6.582" radius= ".15" color="#57AF1C"
+      event-set__enter="_event: mouseenter; _target: #VacuoleText; visible: true"
+      event-set__leave="_event:mouseleave;_target: #VacuoleText; visible: false"></a-box>
+      <a-text id= "NucleusText" visible= "false" value="Nucleus : the brain of the cell" position="-4.937 1.25 -2.935" color= "#000000"></a-text>
       <a-sky color="#294B82"></a-sky>
-     <a-entity obj-model="obj: #rougher-obj; mtl: #rougher-mtl" scale=".05 .05 .05" position= "-1.195 1.25 -4.265" rotation="-90 0 0"></a-entity>
-     <a-entity obj-model="obj: #er-obj; mtl: #er-mtl" scale=".05 .05 .05" position= "-6.515 1.25 -4.265" rotation="-90 0 0"></a-entity>
-     <a-entity obj-model="obj: #er-obj; mtl: #er-mtl" scale=".1 .1 .1" position= "2.912 0.399 -7.4" rotation="-90 0 0"></a-entity>
+     <a-entity obj-model="obj: #rougher-obj; mtl: #rougher-mtl" scale=".05 .05 .05" position= "-1.195 1.25 -4.265" rotation="-90 0 0"
+     event-set__enter="_event: mouseenter; _target: #roughERText; visible: true"
+      event-set__leave="_event:mouseleave;_target: #roughERText; visible: false"></a-entity>
+     <a-entity obj-model="obj: #er-obj; mtl: #er-mtl" scale=".05 .05 .05" position= "-6.515 1.25 -4.265" rotation="-90 0 0"
+     event-set__enter="_event: mouseenter: _target: #ERText; visible: true"
+     event-set__leave="_event:mouseleave;_target: #ERText; visible: false"></a-entity>
+     <a-entity obj-model="obj: #er-obj; mtl: #er-mtl" scale=".1 .1 .1" position= "2.912 0.399 -7.4" rotation="-90 0 0"
+     event-set__enter="_event: mouseenter; _target: #GolgiText; visible: true"
+      event-set__leave="_event:mouseleave;_target: #GolgiText; visible: false" ></a-entity>
      <a-entity obj-model="obj: #mitochondria-obj; mtl: #mitochondria-mtl" scale= ".1 .1 .1" position= "-4 0.22 -2.647" rotation= "-90 0 0"></a-entity>
-     <a-entity obj-model="obj: #mitochondria-obj; mtl: #mitochondria-mtl" scale= ".1 .1 .1" position= "3.9 0.22 -2.647" rotation= "-270 0 0"></a-entity>
-     <a-text value="Rough Er : transfers proteins around the cell" position="-1.497 1.25 -4.67" color= "#000000"></a-text>
-     <a-text value="Mitochondria : the powerhouse of the cell, keeps the cell running" position="3.9 0.22 -2.369" color= "#000000"></a-text>
-     <a-text value="Ribosomes : makes proteins and stores the RNA" position="1.3 2.519 -0.698" color= "#000000"></a-text>
-     <a-text value="Vacuole : stores nutrients for the cell" position=".229 2.519 -5.969" color= "#000000" radius=".02"></a-text>
-     <a-sphere position="3.9 0.919 0.818" radius="1" color="FFC510"></a-sphere>
-     <a-text value="Lysosomes : Gets rid of the waste in the cell" position= "2.675 0.919 1.949" color= "#000000"></a-text>
-     <a-text value="Smooth Er : transfers nutrients" position= "-8.9 1.25 -4.019" color= "#000000"></a-text>
-     <a-text value="Golgi Bodies : gets chromosomes ready to be transfered around the cell" position= "2.912 0.399 -6.8" color= "#000000"></a-text>
+     <a-entity obj-model="obj: #mitochondria-obj; mtl: #mitochondria-mtl" scale= ".1 .1 .1" position= "3.9 0.22 -2.647" rotation= "-270 0 0"
+     event-set__enter="_event; mouseenter: _target: #MitochondriaText; visible: true"
+      event-set__leave="_event:mouseleave;_target: #MitochondriaText; visible: false"></a-entity>
+     <a-text id= "roughERText" value="Rough Er : transfers proteins around the cell" position="-1.497 1.25 -4.67" color= "#000000"></a-text>
+     <a-text id= "MitochondriaText" value="Mitochondria : the powerhouse of the cell, keeps the cell running" position="3.9 0.22 -2.369" color= "#000000"></a-text>
+     <a-text id= #RibosomeText value="Ribosomes : makes proteins and stores the RNA" position="1.3 2.519 -0.698" color= "#000000"></a-text>
+     <a-text id= "VacuoleText" value="Vacuole : stores nutrients for the cell" position=".229 2.519 -5.969" color= "#000000" radius=".02"></a-text>
+     <a-sphere position="3.9 0.919 0.818" radius="1" color="FFC510"
+     event-set__enter="_event: mouseenter: _target: #LysosomeText; visible: true"
+     event-set__leave="_event:mouseleave;_target: #LysosomeText; visible: false"></a-sphere>
+     <a-text id= "LysosomeText" value="Lysosomes : Gets rid of the waste in the cell" position= "2.675 0.919 1.949" color= "#000000"></a-text>
+     <a-text id= "ERText" value="Smooth Er : transfers nutrients" position= "-8.9 1.25 -4.019" color= "#000000"></a-text>
+     <a-text id= "GolgiText" value="Golgi Bodies : gets chromosomes ready to be transfered around the cell" position= "2.912 0.399 -6.8" color= "#000000"></a-text>
+     <a-camera>
+       <a-cursor></a-cursor>
+     </a-camera>
     </a-scene>
   </body>
 </html>
